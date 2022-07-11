@@ -1,2 +1,2 @@
 # Node.js-CodingTest
-### This repo has been made to practice coding tests with javascript(node.js)
+### This repo has been made to leave my practice traces for coding test using javascript(node.js) =]
