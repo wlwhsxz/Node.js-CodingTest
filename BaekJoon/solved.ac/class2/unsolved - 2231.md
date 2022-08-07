@@ -1,35 +1,36 @@
-[백준 2231번: 분해합](https://www.acmicpc.net/problem/2231)
+[백준 2231번: 분해합](https://www.acmicpc.net/problem/2231) - [220807 재시도 실패]
 
-### 답안
+### 후기
+- 간단한 문제이지만 수식을 쉽사리 못 떠올린 문제 중 하나
+- 입력 받은 값과 출력 값을 잘 활용하자!
+- 분해합에 대한 개념을 제대로 이해하질 못해 `let start = N - (String(N).length * 9);` 해당 코드에서 막힘
+
+### 해설
+- `N까지 for 문을 돌리
+
+### 참고 답안
 ```
-const fs = require('fs');
-const input = fs.readFileSync('/dev/stdin').toString();
- 
-const N = parseInt(input)
- 
-let M = 0
-for(let i = 0; i < N; i++) {
-  //각 자리수와 후보값의 합을 구하기 위한 변수
-  let sum = 0;
- 
-  // 0부터 시작하는 후보값
-  const candidateValue = i;
- 
-  //각 자리수를 구하기 위해서 숫자를 string으로 변환하여 계산한다.
-  const stringValue = candidateValue.toString()
- 
-  for(let j = 0; j < stringValue.length; j++) {
-    sum += parseInt(stringValue[j])
-  }
- 
-  sum += candidateValue;
- 
-  if(sum == N) {
-    M = candidateValue
-    break;
-  }
+let fs = require('fs');
+let input = fs.readFileSync("/dev/stdin").toString();
+const N = Number(input);
+let start = N - (String(N).length * 9);
+let M = start;
+let answer;
+while(true){
+    M++;
+    let sum = M;
+    for(let i = 0; i < String(M).length; i++){
+        sum = sum + Number(String(M).charAt(i));
+    }
+    if(sum === N){
+        answer = M;
+        break;
+    }
+    if(M >= N){
+        answer = 0;
+        break;
+    }
 }
- 
-console.log(M)
+console.log(answer);
 ```
-##### 출처 - https://chunghyup.tistory.com/73
+##### 출처 - https://nyang-in.tistory.com/214
