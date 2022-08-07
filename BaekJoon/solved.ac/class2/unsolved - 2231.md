@@ -34,3 +34,4 @@ while(true){
 console.log(answer);
 ```
 ##### 출처 - https://nyang-in.tistory.com/214
+##### 문제 해결에 큰 도움 - 성혁 & https://mountrivers.github.io/boj2231/
