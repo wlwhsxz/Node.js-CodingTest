@@ -36,7 +36,7 @@ for (line of input) {
 ##### 내가 생각한 코드 - https://chunghyup.tistory.com/64
 ##### 참고 - https://junghyeonsu.tistory.com/286
 
-##### sideNote - sort() 함수
+### sideNote - sort() 함수
 ```
 - reduce() 함수 사용시  
 
