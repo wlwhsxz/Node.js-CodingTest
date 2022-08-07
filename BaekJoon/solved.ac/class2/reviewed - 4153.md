@@ -35,3 +35,17 @@ for (line of input) {
 
 ##### 내가 생각한 코드 - https://chunghyup.tistory.com/64
 ##### 참고 - https://junghyeonsu.tistory.com/286
+
+##### sideNote - sort() 함수
+```
+let result = 0;
+let arr = [1, 2, 3, 4, 5];
+arr.forEach((num) => {
+  result += num;
+});
+
+- reduce() 함수 사용시
+let arr = [1, 2, 3, 4, 5];
+const result = arr.reduce((prev, cur) => { // prev ; 현재까지 누적 값 / cur ; 현재 값
+  return sum + cur;
+}, 0); // 초기값(옵션), 미 입력시 배열의 첫번째 값
