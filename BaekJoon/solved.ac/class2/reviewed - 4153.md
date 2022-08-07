@@ -38,14 +38,18 @@ for (line of input) {
 
 ##### sideNote - sort() 함수
 ```
+- reduce() 함수 사용시  
+
+let arr = [1, 2, 3, 4, 5];
+const result = arr.reduce((prev, cur) => { // prev ; 현재까지 누적 값 / cur ; 현재 값
+  return sum + cur;
+}, 0); // 초기값(옵션), 미 입력시 배열의 첫번째 값  
+
+- reduce() 함수 미사용시
 let result = 0;
 let arr = [1, 2, 3, 4, 5];
 arr.forEach((num) => {
   result += num;
 });
 
-- reduce() 함수 사용시
-let arr = [1, 2, 3, 4, 5];
-const result = arr.reduce((prev, cur) => { // prev ; 현재까지 누적 값 / cur ; 현재 값
-  return sum + cur;
-}, 0); // 초기값(옵션), 미 입력시 배열의 첫번째 값
+
