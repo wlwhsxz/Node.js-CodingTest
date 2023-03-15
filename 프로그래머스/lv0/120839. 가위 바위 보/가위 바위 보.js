@@ -1,0 +1,11 @@
+function solution(rsp) {
+    rsp = [...rsp];
+    var answer = '';
+    
+    for(i of rsp){
+        if(i === '2') answer += '0';
+        else if(i === '0') answer += '5';
+        else answer += '2';
+    }
+    return answer;
+}
