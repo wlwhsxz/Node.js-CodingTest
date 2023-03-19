@@ -1,9 +1,10 @@
 function solution(i, j, k) {
-    let a ='';
-    for(i;i<=j;i++){
-        a += i;
+    var answer = 0;
+    for(let a=i; a<=j; a++){
+        let arr = a.toString().split('').map(Number)
+        for(let b=0; b<arr.length; b++){
+            arr[b] === k ? answer++ : answer;
+        }
     }
-        console.log(a.split(k))
-
-    return a.split(k).length-1;
+    return answer;
 }
