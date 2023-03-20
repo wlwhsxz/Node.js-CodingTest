@@ -7,7 +7,6 @@ function solution(sides) {
     let bool = true;
     
     while(bool){
-    console.log([a,b,c])
         let max = Math.max(...sides)
         let arr = [];
         if( a === max && (b+c) > a) answer++;
