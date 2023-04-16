@@ -1,0 +1,13 @@
+function solution(t, p) {
+    var answer = 0;
+    let i = 0;
+    let pLen = p.length;
+    while(true){
+        let num = t.slice(i, pLen);
+        if(num <= Number(p)) answer++;
+        i++;
+        pLen++;
+        if(pLen === t.length + 1) break;
+    }
+    return answer;
+}
