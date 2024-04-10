@@ -14,7 +14,6 @@ var wordPattern = function(pattern, str) {
         if(map.has(pattern[i]) && 
            map.get(pattern[i]) !== words[i]) return false;
         map.set(pattern[i], words[i]);
-        console.log(map)
     }
     return true;
 };
