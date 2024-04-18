@@ -6,6 +6,7 @@
 var containsNearbyDuplicate = function(nums, k) {
   const map = new Map();
   for (let i = 0; i < nums.length; i++) {
+    console.log(i, map.get(nums[i]))
     if (i - map.get(nums[i]) <= k) {
       return true;
     }
